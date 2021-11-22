@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nomad/mservice.dart';
-import 'package:nomad/service.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +23,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           body: FutureBuilder<List<Data>>(
-              future: Service.getData(),
+              future: Data.getData(),
               builder: (context, snapshot) {
                 var s = snapshot.data;
                 if (snapshot.connectionState == ConnectionState.waiting) {
